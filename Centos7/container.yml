@@ -52,13 +52,13 @@ services:
   # To use this example, uncomment it and delete the curly braces after services key.
   # You may need to run `docker pull ubuntu:trusty` for this to work.
 
-  webu:
+  webc:
     from: "centos:7"
     roles:
       - { role: 'user9.nginx' }
     ports:
       - "80:80"
-    command: ['echo "\ndaemon off;" >> /etc/nginx/nginx.conf && nginx']
+    command: ['nginx']
   #   dev_overrides:
   #     environment:
   #       - "DEBUG=1"
